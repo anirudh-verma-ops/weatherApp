@@ -1,0 +1,17 @@
+.Active{
+    background-color: rgb(167, 233, 250);
+    color: white;
+}
+.height{
+    height: fit-content;
+}
+.Font{
+    size: 40px;
+    color: black;
+}
+.custBackgroundColorWhite {
+    background: var(--custWhite) !important;
+}.Adjust{
+    position: relative;
+    top: 20px;
+}

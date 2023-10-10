@@ -1,0 +1,20 @@
+<ion-content>
+<ion-item>
+    <ion-input type="text" [(ngModel)]="cityName" placeholder="Enter City"></ion-input>
+</ion-item>
+<ion-button expand="full" (click)="setCity()">
+    Search
+</ion-button>
+
+
+
+<ion-card *ngIf="weatherData">
+    <ion-card-header>
+        {{weatherData.name }}, {{ weatherData.sys.country }}
+    </ion-card-header>
+    <ion-card-content>
+        <p>Temperature: {{ weatherData.main.temp }}°C</p>
+        <p>Description: {{ weatherData.weather[0].description }}</p>
+    </ion-card-content>
+</ion-card>
+</ion-content>

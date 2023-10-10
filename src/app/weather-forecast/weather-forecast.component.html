@@ -1,0 +1,33 @@
+
+
+
+    <ion-item>
+      <ion-input
+        [(ngModel)]="cityName"
+        placeholder="Enter City"
+      ></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="getWeatherForecast()">
+      Get Forecast
+    </ion-button>
+<ion-content style="height: 75%;">
+    <ion-list *ngIf="forecastData">
+      <ion-item *ngFor="let item of forecastData.list">
+        <ion-label>
+          Date: {{ item.dt_txt }}
+          <br />
+          Temperature: {{ item.main.temp }}°C
+          <br />
+          Description: {{ item.weather[0].description }}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>
+
+  <!-- </ion-scroll-bar> -->
+<!-- weather-forecast.component.html -->
+
+
+  
+    
+    
